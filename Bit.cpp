@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-void bitStuff(char *input, char *stuffed)
+void bitStuff(char *in, char *stuffed)
 {
     int count = 0; 
     int j = 0;    
-    for (int i = 0; i < strlen(input); i++)
+    for (int i = 0; i < strlen(in); i++)
 	{
-        stuffed[j++] = input[i];
-        if (input[i] == '1')
+        stuffed[j++] = in[i];
+        if (in[i] == '1')
         {
             count++;
             if (count == 5)
@@ -56,14 +56,14 @@ int main()
 {
 
 
-    char input[100];
+    char in[100];
     char stuffed[200];
     char destuffed[100];
 
     printf("Enter a binary string: ");
-    scanf("%s", input);
+    scanf("%s", in);
 
-    bitStuff(input, stuffed);
+    bitStuff(in, stuffed);
     printf("Stuffed string: %s\n", stuffed);
 
     bitDestuff(stuffed, destuffed);
@@ -72,3 +72,4 @@ int main()
     return 0;
 
 }
+
