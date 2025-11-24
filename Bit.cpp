@@ -23,24 +23,19 @@ void bitStuff(char *in, char *stuffed)
         }
     }
     stuffed[j] = '\0'; 
-
 }
 void bitDestuff(char *stuffed, char *destuffed)
 {
-
     int count = 0;
     int j = 0;
     for (int i = 0; i < strlen(stuffed); i++)
     {
-
         destuffed[j++] = stuffed[i];
         if (stuffed[i] == '1')
         {
-
             count++;
             if (count == 5)
             {
-
                 i++;
                 count = 0;
             }
@@ -54,22 +49,14 @@ void bitDestuff(char *stuffed, char *destuffed)
 }
 int main()
 {
-
-
     char in[100];
     char stuffed[200];
     char destuffed[100];
-
     printf("Enter a binary string: ");
     scanf("%s", in);
-
     bitStuff(in, stuffed);
     printf("Stuffed string: %s\n", stuffed);
-
     bitDestuff(stuffed, destuffed);
     printf("Destuffed string: %s\n", destuffed);
-
     return 0;
-
 }
-
